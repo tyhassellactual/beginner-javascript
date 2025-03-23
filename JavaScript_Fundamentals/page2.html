@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment 2</title>
+    <link rel="stylesheet" type="text/css" href="Assignment2.css">
+  </head>
+  <body>
+    <nav id="dropdown-menu"></nav>
+    <script src="finalProject.js"></script>
+    <h1>Tyler James Hassell</h1>
+    <hr>
+    <div id="greeting"></div>
+    <hr>
+    <h2>Take an online quiz.</h2>
+    <form name="myform">
+      <input type="button" value="Take Quiz" onclick="takeTest();">
+    </form>
+    <script>
+      var userName = prompt("What is your name?");
+      document.getElementById("greeting").textContent = "Welcome, " + userName + "!";
+    </script>
+    <script>
+      var numCorrect = 0;
+
+      function takeTest() {
+        var response = "";
+        var points = 0;
+
+        var q1 = "Which data type allows a sequence of alphanumeric characters written in quotes (either single or double quotes)?";
+        var a1 = "string";
+
+        var q2 = "Using Javascript operator precedence, what is the result of the following expression? 3 + 3 * 5;";
+        var a2 = "18";
+
+        var q3 = "A variable name can start with the * symbol (type 'true' or 'false')?";
+        var a3 = "false";
+
+        response = prompt(q1, "");
+        if (response) points = runningTotal((response.toLowerCase() === a1) ? 1 : 0);
+        alert(points);
+
+        response = prompt(q2, "");
+        if (response) points = runningTotal((response === a2) ? 1 : 0);
+        alert(points);
+
+        response = prompt(q3, "");
+        if (response) points = runningTotal((response.toLowerCase() === a3) ? 1 : 0);
+        alert("You answered a total of " + points + " correctly.");
+
+        numCorrect = 0; // Reset numCorrect
+        points = 0;
+      }
+
+      function runningTotal(i) {
+        numCorrect += i;
+        return numCorrect;
+      }
+    </script>
+  </body>
+</html>

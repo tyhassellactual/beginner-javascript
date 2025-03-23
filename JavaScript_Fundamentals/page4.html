@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment 4</title>
+    <link rel="stylesheet" type="text/css" href="Assignment4.css">
+  </head>
+  <body>
+    <nav id="dropdown-menu"></nav>
+    <script src="finalProject.js"></script>
+    <h1>Tyler James Hassell</h1>
+    <hr>
+    <h2>Fruits in Alphabetical Order:</h2>
+    <ul id="fruitList"></ul>
+    <h2>Current Date Information:</h2>
+    <p id="currentDate"></p>
+    <script>
+      // array of fruits
+      const fruitArray = ["Mango", "Banana", "Apple", "Cherry", "Pineapple"];
+
+      // sort fruits
+      const sortedFruits = fruitArray.sort();
+
+      // display the sorted fruits
+      const fruitListElement = document.getElementById("fruitList");
+      sortedFruits.forEach(fruit => {
+        const listItem = document.createElement("li");
+        listItem.textContent = fruit;
+        fruitListElement.appendChild(listItem);
+      });
+
+      // current date information
+      const currentDate = new Date();
+      const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      const monthsOfYear = [
+        "January", "February", "March", "April", "May", "June", 
+        "July", "August", "September", "October", "November", "December"
+      ];
+
+      const dayName = daysOfWeek[currentDate.getDay()];
+      const dayOfMonth = currentDate.getDate();
+      const monthName = monthsOfYear[currentDate.getMonth()];
+      const year = currentDate.getFullYear();
+
+      // display the date
+      const dateInfo = `Today is ${dayName}, the ${dayOfMonth} day of ${monthName} in the year ${year}.`;
+      document.getElementById("currentDate").textContent = dateInfo;
+    </script>
+  </body>
+</html>
+

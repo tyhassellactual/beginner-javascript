@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment 6</title>
+    <link rel="stylesheet" type="text/css" href="Assignment6.css">
+  </head>
+  <body>
+    <nav id="dropdown-menu"></nav>
+    <script src="finalProject.js"></script>
+    <h2>Tyler James Hassell</h2>
+    <hr>
+    <h1>Student Information Form</h1>
+  <form name="TysForm" onsubmit="return checkForm()">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName"><br><br>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName"><br><br>
+
+    <label for="email">APUS Email Address:</label>
+    <input type="email" id="email" name="email"><br><br>
+
+    <label for="favoriteSubject">Favorite Subject:</label>
+    <select id="favoriteSubject" name="favoriteSubject">
+      <option value="">--Select a Subject--</option>
+      <option value="Math">Math</option>
+      <option value="Science">Science</option>
+      <option value="History">History</option>
+      <option value="English">English</option>
+      <option value="noLearning">I Don't Like Learning</option>
+    </select><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+    <script src="Assignment6.js"></script>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;   
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #F2E6FF;
+}
+
+h1 {
+  text-align: center;  
+}
+
+/* dropdown menu style */
+#dropdown-menu {
+  align-self: flex-start;
+  margin: 20px;
+}
+
+#dropdown-menu select {
+  width: 250px;
+  padding: 12px;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  border: 2px solid #2a4d69;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#dropdown-menu select:hover,
+#dropdown-menu select:focus {
+  border-color: #3c763d;
+  background-color: #f0fff0;
+  color: #2a4d69;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#dropdown-menu select option {
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  padding: 5px;
+}
+
+/* slideshow style */
+.slideshow-container {
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+  text-align: center;
+}
+
+#slideshow-image {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* controls style */
+.slideshow-controls {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.slideshow-controls button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+}
+
+.slideshow-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
